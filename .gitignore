@@ -1,0 +1,128 @@
+# Ignorer les fichiers de dépendances et de configuration spécifiques à l'environnement
+.env
+
+# Ignorer les répertoires et fichiers de dépendances pour le backend
+/backend/api/vendor/
+/backend/api/node_modules/
+/backend/api/.env
+
+# Ignorer les fichiers de cache et de log
+*.log
+*.cache
+
+# Ignorer les fichiers de configuration de l'IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignorer les fichiers de dépendances et de configuration spécifiques à l'environnement pour le frontend
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.env
+
+# Ignorer les fichiers de build et de distribution
+/dist
+/build
+
+# Ignorer les fichiers de configuration de l'IDE pour le frontend
+/frontend/.vscode/
+/frontend/.idea/
+
+# Ignorer les fichiers de configuration de l'IDE pour le backend
+/backend/api/.vscode/
+/backend/api/.idea/
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+.vscode/
+.idea/
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.iml
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+.DS_Store
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.bak
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.tmp
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.orig
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.pyc
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+__pycache__/
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.pyo
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.pyd
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.egg-info/
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.egg
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.whl
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.so
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.dll
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.exe
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.dmg
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.pkg
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.deb
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.rpm
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.tar.gz
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.zip
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.7z
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.rar
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.gz
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.bz2
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.xz
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.lz
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.lzma
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.lzo
+
+# Ignorer les fichiers de configuration de l'IDE pour le projet global
+*.z
