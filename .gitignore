@@ -126,3 +126,4 @@ __pycache__/
 
 # Ignorer les fichiers de configuration de l'IDE pour le projet global
 *.z
+node_modules/*

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "maplibre-gl": "^5.5.0",
+    "vue-router": "^4.5.1"
+  }
+}
