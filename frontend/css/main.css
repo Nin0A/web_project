@@ -513,91 +513,78 @@ body .profil > div:nth-child(2) a:focus {
 }
 
 .projects {
-  background-image: url("../assets/img/MacBook-Pro-16.png");
   background-size: cover;
-  /* Couvre entièrement la section */
   background-position: center;
-  /* Centre l'image horizontalement et verticalement */
   background-repeat: no-repeat;
-  /* Empêche la répétition de l'image */
   color: aliceblue;
   width: 100%;
   height: 110vh;
-  /* Occupe toute la hauteur de la fenêtre visible */
   display: flex;
   justify-content: center;
   text-align: center;
-  /* Centre le texte s'il y en a */
   flex-direction: column;
 }
-.projects h2 {
-  color: linear-gradient(135deg, #ffffff, #f0f0f0);
-  font-size: 8em;
-  grid-column: 1/-1;
-  grid-row: 2;
-}
-.projects div {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 3;
-  gap: 1em;
-  /* Effet d'arrière-plan animé */
-  /* Effet au survol */
-}
-.projects div article {
-  width: 70%;
-  background: black;
-  color: aliceblue;
-  /* Texte lisible sur fond noir */
-  padding: 1em;
-  /* Coins légèrement arrondis */
+.projects .slider-container {
+  width: 100%;
   overflow: hidden;
-  /* Empêche les débordements pendant l'animation */
   position: relative;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  /* Animation fluide */
-  z-index: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centre le slider horizontalement */
+  background-color: #CA3C66;
 }
-.projects div article img {
-  width: 200px;
-}
-.projects div article h4 {
-  text-align: end;
-  font-size: 3em;
-}
-.projects div article::before {
-  content: "";
+.projects .prev-btn, .projects .next-btn {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 18px;
+}
+.projects .prev-btn {
+  left: 10px;
+}
+.projects .next-btn {
+  right: 10px;
+}
+.projects .slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+  align-items: center;
+  margin: auto; /* Centre le slider horizontalement */
+}
+.projects .slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects .slide article {
+  background-color: black;
+  width: 60em;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: aliceblue;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  margin: 0 auto; /* Centre l'article horizontalement */
+}
+.projects .slide article img {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #ffffff, #f0f0f0);
-  z-index: -1;
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.5s ease-in-out;
 }
-.projects div article:hover {
-  color: black;
-  /* Texte devient noir */
-  transform: translateY(-5px) scale(1.03);
-  /* Légère élévation et zoom */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  /* Ombre douce */
-  cursor: grab;
-}
-.projects div article:hover::before {
-  transform: scaleY(1);
-  /* Le fond animé se déploie */
-}
-.projects div #article-1,
-.projects div #article-2,
-.projects div #article-3,
-.projects div #article-4,
-.projects div #article-5 {
-  grid-column: 1;
-  margin-bottom: 2em;
+.projects .slide article h4 {
+  font-size: 3em;
 }
 
 .contact {

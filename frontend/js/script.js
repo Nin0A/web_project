@@ -145,3 +145,32 @@ window.addEventListener('scroll', () => {
 
 // Appeler la fonction une fois au chargement pour prendre en compte les sections déjà visibles
 checkVisibility();
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentIndex = 0;
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlider();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlider();
+    }
+
+    function updateSlider() {
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    // Change slide every 3 seconds (optional)
+    // setInterval(nextSlide, 3000);
+});
