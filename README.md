@@ -5,14 +5,15 @@
 Web Project
 
 ### 🚀 Contributors
-- **Nino Arcelin**  
-- **Nicka Ratovobodo**  
+
+- **Nino Arcelin**
+- **Nicka Ratovobodo**
 - **Célie Ponroy**
 - **Matias Amaglio**
 
 ## Requirements 🛠️
 
-- Docker 
+- Docker
 - Docker Compose
 - Make
 
@@ -26,27 +27,35 @@ Web Project
 The Makefile provides several commands to manage Docker services:
 
 - **Start the services:**
+
   ```sh
   make up
   ```
+
   This command starts the services defined in `docker-compose.yml` in the background.
 
 - **Stop and remove the services:**
+
   ```sh
   make down
   ```
+
   This command stops and removes the services defined in `docker-compose.yml`.
 
 - **Build Docker images:**
+
   ```sh
   make build
   ```
+
   This command builds the Docker images defined in `docker-compose.yml`.
 
 - **Clean up Docker artifacts:**
+
   ```sh
   make clear
   ```
+
   This command stops the services, removes volumes, images, and orphaned containers.
 
 - **Display help:**
@@ -62,15 +71,18 @@ The Makefile provides several commands to manage Docker services:
 To ensure smooth collaboration and efficient development, we follow the Git workflow outlined below:
 
 1. **Main Branches**:
+
    - `main` (Production): This branch contains stable code that is ready for production deployment. All final releases should come from this branch.
    - `develop` (Development): This branch contains the latest features and is always deployable to a staging environment. All development work is merged here before being released to production.
 
 2. **Feature Branches**:
+
    - Create a new branch from `develop` for every feature or bugfix you're working on.
    - Naming convention for feature branches:  
      `feature/{short-description}` (e.g., `feature/user-authentication`).
 
 3. **Workflow**:
+
    - **Start a Feature**:  
      When starting a new feature, create a branch from `develop`:
      ```bash
@@ -79,10 +91,12 @@ To ensure smooth collaboration and efficient development, we follow the Git work
      ```
    - **Commit Changes**:  
      Follow the Gitmoji commit guidelines (see below) for meaningful commit messages.
+
      - Example commit:  
        `git commit -m ":sparkles: add user authentication module"`
 
    - **Push the Branch**:
+
      ```bash
      git push origin feature/{short-description}
      ```
@@ -97,6 +111,7 @@ To ensure smooth collaboration and efficient development, we follow the Git work
      Once features are merged into `develop` and stable, deploy to the staging environment. When it's ready for production, merge `develop` into `main`.
 
 4. **Release Workflow**:
+
    - When preparing for a release, create a `release` branch from `develop`:
      ```bash
      git checkout develop
@@ -131,7 +146,8 @@ Use **Gitmojis** to provide clear, standardized commit messages. Here's a list o
 - `🚀`: Deploying to production
 - `✅`: Adding tests
 
-Example commit message :
+Example commit message:
+
 ```bash
 git commit -m ":sparkles: add real-time messaging feature"
 ```
