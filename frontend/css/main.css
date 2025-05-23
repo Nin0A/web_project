@@ -593,17 +593,11 @@ body .profil > div:nth-child(2) a:focus {
 }
 .projects div #article-1,
 .projects div #article-2,
-.projects div #article-3 {
-  grid-column: 1;
-}
+.projects div #article-3,
 .projects div #article-4,
 .projects div #article-5 {
-  grid-column: 3;
-  justify-self: end;
-}
-.projects div #article-4 h4,
-.projects div #article-5 h4 {
-  text-align: left;
+  grid-column: 1;
+  margin-bottom: 2em;
 }
 
 .contact {

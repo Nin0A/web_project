@@ -645,18 +645,12 @@ body {
 
         #article-1,
         #article-2,
-        #article-3 {
-            grid-column: 1;
-        }
-
+        #article-3,
         #article-4,
-        #article-5 {
-            grid-column: 3;
-            justify-self: end;
-
-            h4 {
-                text-align: left;
-            }
+        #article-5
+        {
+            grid-column: 1;
+            margin-bottom: 2em;
         }
     }
 }
