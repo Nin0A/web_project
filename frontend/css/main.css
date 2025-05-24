@@ -256,6 +256,7 @@ body header div section article:nth-child(2) {
   /* Centre horizontalement */
   align-self: center;
   /* Centre verticalement */
+  max-width: 30em;
 }
 body header div section article:nth-child(2) h3 {
   font-size: 3em;
@@ -337,17 +338,32 @@ body .profil {
   display: flex;
   background-color: rgb(255, 247, 247);
   flex-direction: column;
-  background-image: url("../assets/img/Gradient.svg");
-  background-size: contain;
-  /* Ajuste l'image pour qu'elle soit entièrement visible */
+  background-image: url("../assets/img/lyon1.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
-  /* Empêche la répétition de l'image */
   background-position: center;
-  /* Centre l'image dans le conteneur */
   justify-content: space-between;
   align-items: center;
   text-align: center;
   justify-items: center;
+}
+body .profil > div {
+  max-width: 800px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.3); /* Fond semi-transparent pour une meilleure lisibilité */
+  border-radius: 10px;
+  margin: 20px;
+}
+body .profil > div h1 {
+  color: #fff; /* Couleur du titre */
+  font-size: 4em;
+  margin-bottom: 20px;
+}
+body .profil > div p {
+  color: #f0f0f0; /* Couleur du texte */
+  font-size: 1.8em;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 body .profil > div:nth-child(2) h2 {
   font-family: "WindSong", serif;
@@ -363,36 +379,24 @@ body .profil > div:nth-child(2) a {
   color: rgb(255, 197, 226);
   text-decoration: none;
   background-color: black;
-  /* Fond noir initial */
   border-radius: 32px;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  /* Ombre du texte initiale */
   padding: 0.1em 0.8em;
   border: 0.1em solid black;
-  /* Bordure noire initiale */
   display: inline-block;
-  /* Nécessaire pour les animations de transformation */
   transition: all 0.3s ease-in-out;
-  /* Transition fluide pour tous les changements */
   position: relative;
 }
 body .profil > div:nth-child(2) a:hover {
   color: black;
-  /* Changement de couleur du texte au survol */
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-  /* Ombre du texte rose */
   border-color: rgb(0, 0, 0);
-  /* Bordure rose */
   box-shadow: 0 0 15px rgb(0, 0, 0);
-  /* Ombre de boîte rose */
   background-color: transparent;
-  /* Fond transparent au survol */
   transform: scale(1.1);
-  /* Zoom du lien au survol */
 }
 body .profil > div:nth-child(2) a:focus {
   outline: none;
-  /* Supprime l'effet de focus */
 }
 
 /* Conteneur principal du texte défilant */
@@ -453,7 +457,6 @@ body .profil > div:nth-child(2) a:focus {
   }
 }
 .page-section.skills {
-  background-color: #f0f0f0;
   padding: 0;
   position: relative;
   height: 100vh;
@@ -461,6 +464,8 @@ body .profil > div:nth-child(2) a:focus {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background-image: url("../assets/img/Gradient.svg");
+  background-repeat: no-repeat;
 }
 
 .timeline {

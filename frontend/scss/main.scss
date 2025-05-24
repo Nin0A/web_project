@@ -206,6 +206,8 @@ body {
                     /* Centre horizontalement */
                     align-self: center;
                     /* Centre verticalement */
+                    max-width: 30em;
+
 
                     h3 {
                         font-size: 3em;
@@ -305,85 +307,80 @@ body {
     }
 
     .profil {
+    height: 100vh;
+    display: flex;
+    background-color: rgb(255, 247, 247);
+    flex-direction: column;
+    background-image: url('../assets/img/lyon1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
 
-        height: 100vh;
+    &>div {
+        max-width: 800px;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.3); /* Fond semi-transparent pour une meilleure lisibilité */
+        border-radius: 10px;
+        margin: 20px;
 
-        display: flex;
-
-        background-color: rgb(255, 247, 247);
-        flex-direction: column;
-        background-image: url('../assets/img/Gradient.svg');
-        background-size: contain;
-        /* Ajuste l'image pour qu'elle soit entièrement visible */
-        background-repeat: no-repeat;
-        /* Empêche la répétition de l'image */
-        background-position: center;
-        /* Centre l'image dans le conteneur */
-        justify-content: space-between;
-
-
-        align-items: center;
-        text-align: center;
-        justify-items: center;
-
-
-        &>div:nth-child(2) {
-
-            h2 {
-                font-family: "WindSong", serif;
-                font-weight: 500;
-                font-style: normal;
-                font-size: 8em;
-            }
-
-            a {
-                font-weight: 500;
-                width: 100%;
-                font-size: 10em;
-                color: linear-gradient(to right, #f5f5dc, #f9c5d1);
-                color: rgb(255, 197, 226);
-                text-decoration: none;
-                background-color: black;
-                /* Fond noir initial */
-                border-radius: 32px;
-                text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-                /* Ombre du texte initiale */
-                padding: 0.1em 0.8em;
-                border: 0.1em solid black;
-                /* Bordure noire initiale */
-                display: inline-block;
-                /* Nécessaire pour les animations de transformation */
-                transition: all 0.3s ease-in-out;
-                /* Transition fluide pour tous les changements */
-                position: relative;
-            }
-
-            a:hover {
-                color: black;
-                /* Changement de couleur du texte au survol */
-                text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-                /* Ombre du texte rose */
-                border-color: rgb(0, 0, 0);
-                /* Bordure rose */
-                box-shadow: 0 0 15px rgb(0, 0, 0);
-                /* Ombre de boîte rose */
-                background-color: transparent;
-                /* Fond transparent au survol */
-                transform: scale(1.1);
-                /* Zoom du lien au survol */
-            }
-
-
-            a:focus {
-                outline: none;
-                /* Supprime l'effet de focus */
-            }
-
+        h1 {
+            color: #fff; /* Couleur du titre */
+            font-size: 4em;
+            margin-bottom: 20px;
         }
 
-
-
+        p {
+            color: #f0f0f0; /* Couleur du texte */
+            font-size: 1.8em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
     }
+
+    &>div:nth-child(2) {
+        h2 {
+            font-family: "WindSong", serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 8em;
+        }
+
+        a {
+            font-weight: 500;
+            width: 100%;
+            font-size: 10em;
+            color: linear-gradient(to right, #f5f5dc, #f9c5d1);
+            color: rgb(255, 197, 226);
+            text-decoration: none;
+            background-color: black;
+            border-radius: 32px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            padding: 0.1em 0.8em;
+            border: 0.1em solid black;
+            display: inline-block;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+        }
+
+        a:hover {
+            color: black;
+            text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+            border-color: rgb(0, 0, 0);
+            box-shadow: 0 0 15px rgb(0, 0, 0);
+            background-color: transparent;
+            transform: scale(1.1);
+        }
+
+        a:focus {
+            outline: none;
+        }
+    }
+}
+
 }
 
 /* Conteneur principal du texte défilant */
@@ -454,7 +451,6 @@ body {
 
 
 .page-section.skills {
-    background-color: #f0f0f0;
     padding: 0;
     position: relative;
     height: 100vh;
@@ -462,6 +458,9 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    background-image: url('../assets/img/Gradient.svg');
+    background-repeat: no-repeat;
+
 }
 
 .timeline {
@@ -567,6 +566,7 @@ body {
     justify-content: center;
     text-align: center;
     flex-direction: column;
+
 
     .slider-container {
         width: 100%;
