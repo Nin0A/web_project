@@ -214,9 +214,13 @@ body header div section {
     max-width: 400px;
   }
 }
+body header div section video {
+  max-width: 900px;
+}
 body header div section article:not(:nth-child(2)) {
   height: 75vh;
   width: 90%;
+  max-width: 900px;
   background-position: center;
   /* Centrage de l'image */
   background-repeat: no-repeat;
@@ -568,6 +572,7 @@ body .profil > div:nth-child(2) a:focus {
   align-items: center;
   justify-content: center; /* Centre le slider horizontalement */
   background-color: #CA3C66;
+  border-top: solid black 2px;
 }
 .projects .prev-btn, .projects .next-btn {
   position: absolute;
