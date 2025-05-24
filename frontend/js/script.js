@@ -1,18 +1,3 @@
-// Exemple pour ajuster la vitesse dynamiquement
-const marquee = document.querySelector('.marquee-content');
-
-// Exemple pour ajuster la vitesse dynamiquement
-const marquee2 = document.querySelector('.marquee-content2');
-
-// Change la durée de l'animation avec JavaScript
-function setSpeed(speed) {
-    marquee.style.animationDuration = `${speed}s`;
-    marquee2.style.animationDuration = `${speed}s`;
-}
-
-// Exemple : ajuster la vitesse à 5 secondes
-setSpeed(15);
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const progressBars = document.querySelectorAll('.progress-bar');
