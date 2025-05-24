@@ -539,10 +539,11 @@ body .profil > div:nth-child(2) a:focus {
   top: 50%;
   transform: translateY(-50%);
   border: none;
-  padding: 10px;
+  padding: 30px;
   cursor: pointer;
   z-index: 10;
   font-size: 18px;
+  background: none;
 }
 .projects .prev-btn {
   left: 10px;
