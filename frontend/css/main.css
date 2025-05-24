@@ -493,7 +493,7 @@ body .profil > div:nth-child(2) a:focus {
 .timeline-date {
   font-weight: bold;
   color: #CA3C66; /* Couleur pour la date */
-  font-size: 1.2em;
+  font-size: 1.6em;
   margin-bottom: 10px;
 }
 
@@ -503,6 +503,7 @@ body .profil > div:nth-child(2) a:focus {
 }
 
 .timeline-content p {
+  font-size: 1.3em;
   color: #666; /* Couleur pour le paragraphe */
 }
 
@@ -544,10 +545,10 @@ body .profil > div:nth-child(2) a:focus {
   background: none;
 }
 .projects .prev-btn {
-  left: 10px;
+  left: 150px;
 }
 .projects .next-btn {
-  right: 10px;
+  right: 150px;
 }
 .projects .slider {
   display: flex;
@@ -585,7 +586,7 @@ body .profil > div:nth-child(2) a:focus {
   height: 100%;
 }
 .projects .slide article h4 {
-  font-size: 3em;
+  font-size: 5em;
 }
 
 .contact {

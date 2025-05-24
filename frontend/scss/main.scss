@@ -492,7 +492,7 @@ body {
 .timeline-date {
     font-weight: bold;
     color: #CA3C66; /* Couleur pour la date */
-    font-size: 1.2em;
+    font-size: 1.6em;
     margin-bottom: 10px;
 }
 
@@ -502,6 +502,7 @@ body {
 }
 
 .timeline-content p {
+    font-size: 1.3em;
     color: #666; /* Couleur pour le paragraphe */
 }
 
@@ -549,11 +550,11 @@ body {
     }
 
     .prev-btn {
-        left: 10px;
+        left: 150px;
     }
 
     .next-btn {
-        right: 10px;
+        right: 150px;
     }
 
     .slider {
@@ -595,7 +596,7 @@ body {
         }
 
         h4 {
-            font-size: 3em;
+            font-size: 5em;
         }
     }
 }
