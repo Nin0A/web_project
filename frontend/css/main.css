@@ -432,6 +432,7 @@ body .profil > div:nth-child(2) a:focus {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  overflow-x: hidden;
 }
 
 .timeline::before {

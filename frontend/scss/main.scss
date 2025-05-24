@@ -431,6 +431,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    overflow-x: hidden;
 }
 
 .timeline::before {
