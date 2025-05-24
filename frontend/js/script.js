@@ -152,7 +152,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.slide');
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
+    const sliderContainer = document.querySelector('.slider-container');
     let currentIndex = 0;
+
+    // Tableau de couleurs de fond pour chaque diapositive
+    const backgroundColors = [
+        '#CA3C66',
+        '#6A5ACD',
+        '#20B2AA',
+        '#FFD700',
+        '#32CD32'
+    ];
 
     function nextSlide() {
         currentIndex = (currentIndex + 1) % slides.length;
@@ -166,6 +176,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateSlider() {
         slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        // Change la couleur de fond du conteneur
+        sliderContainer.style.backgroundColor = backgroundColors[currentIndex];
     }
 
     nextBtn.addEventListener('click', nextSlide);
@@ -174,3 +186,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Change slide every 3 seconds (optional)
     // setInterval(nextSlide, 3000);
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+
+    function checkVisibility() {
+        timelineItems.forEach(item => {
+            const rect = item.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.75 && rect.bottom > window.innerHeight * 0.25) {
+                item.classList.add('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility(); // Check visibility on load
+});
+document.addEventListener('mousemove', function(e) {
+    const light = document.getElementById('light');
+    light.style.transform = `translate(${e.clientX - 100}px, ${e.clientY - 100}px)`;
+  });
+  

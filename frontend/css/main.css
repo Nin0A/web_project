@@ -413,103 +413,101 @@ body .profil > div:nth-child(2) a:focus {
     transform: translateX(0);
   }
 }
-.skills {
-  background-image: url("../assets/img/002.svg");
-}
-.skills > div {
-  padding: 1em;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 50% 50%;
+.page-section.skills {
+  background-color: #f0f0f0;
+  padding: 0;
+  position: relative;
   height: 100vh;
-  justify-items: center;
-}
-.skills > div article:not(:nth-child(1)) {
-  width: auto;
-  height: 95vh;
-  padding: 2em;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  /* Safari */
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  z-index: 10;
-  grid-column: 2;
-  grid-row: 1/span 2;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
-.skills > div article:not(:nth-child(1)) img {
-  background-color: red;
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
   height: 100%;
-  width: auto;
-}
-.skills > div article:not(:nth-child(1)) button {
-  margin-top: 0.5em;
-  width: fit-content;
-  background-color: transparent;
-  font-size: 1em;
-  border-radius: 32px;
-  background-color: aliceblue;
-  padding: 0.3em 0.8em;
-  border: none;
-}
-.skills > div .skillsgram {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1em;
-  align-self: baseline;
-  align-items: baseline;
-  justify-self: baseline;
-  justify-content: baseline;
-  justify-items: baseline;
-  position: relative;
-  margin-top: 15%;
-}
-.skills > div .skillsgram .skill-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: white;
-  padding: 1em;
-  z-index: 1;
-  border-radius: 32px;
+  justify-content: space-around;
 }
-.skills > div .skillsgram .skill-item h3 {
-  margin-top: 1em;
-  font-size: 2em;
-  font-weight: bold;
-}
-.skills > div .skillsgram .skill-item .progress-bar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 10em;
-  height: 10em;
-  border-radius: 50%;
-  background: radial-gradient(closest-side, white 79%, transparent 80% 100%), conic-gradient(var(--progress-color, black) calc(var(--progress) * 1%), white 0);
-  position: relative;
-}
-.skills > div .skillsgram .skill-item .progress-bar::after {
-  content: attr(data-value) "%";
+
+.timeline::before {
+  content: "";
   position: absolute;
-  font-size: 2.5em;
-  font-weight: bold;
+  width: 2px;
+  background-color: #333;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
 }
-.skills > div h2 {
-  justify-self: baseline;
-  font-family: "Libre Barcode 39 Extended Text", serif;
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #f0f0f0;
+  border: 2px solid #333;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(odd)::after {
+  right: -10px;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-item:nth-child(even)::after {
+  left: -10px;
+}
+
+.timeline-content {
+  padding: 20px 30px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-date {
   font-weight: bold;
-  font-style: normal;
-  font-size: 19em;
-  color: aliceblue;
-  grid-column: 1/-1;
-  grid-row: 2;
-  text-align: start;
+  color: #CA3C66; /* Couleur pour la date */
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.timeline-content h3 {
+  color: #333; /* Couleur pour le titre */
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  color: #666; /* Couleur pour le paragraphe */
+}
+
+.timeline-item.visible {
+  opacity: 1;
 }
 
 .projects {
@@ -571,6 +569,8 @@ body .profil > div:nth-child(2) a:focus {
   background-color: black;
   width: 60em;
   padding: 20px;
+  padding-left: 5em;
+  padding-right: 5em;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: aliceblue;
@@ -592,6 +592,7 @@ body .profil > div:nth-child(2) a:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #f0f0f0;
   background-image: url("../assets/img/Group 1.svg");
   background-size: contain;
   /* Ajuste pour que l'image entière soit visible */
@@ -639,7 +640,7 @@ body .profil > div:nth-child(2) a:focus {
 }
 .contact article > h2:nth-child(3) {
   color: black;
-  font-size: 14em;
+  font-size: 10em;
   grid-row: 1;
   grid-column: 2;
   text-align: start;
@@ -767,6 +768,26 @@ body .profil > div:nth-child(2) a:focus {
   margin-top: 1em;
   font-size: 0.8em;
   padding-top: 1em;
+}
+
+#board {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+#light {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.1) 60%, transparent 80%);
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  z-index: 1000;
+  transition: transform 0.05s linear;
 }
 
 /*# sourceMappingURL=main.css.map */
